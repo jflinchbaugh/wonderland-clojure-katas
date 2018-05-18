@@ -26,8 +26,6 @@
 
 (def col-for-letter row-for-letter)
 
-(col-for-letter (row-for-letter table \c) \b)
-
 (defn code-for [t r c]
   (col-for-letter (row-for-letter t r) c)
 )
