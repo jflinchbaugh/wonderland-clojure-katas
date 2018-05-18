@@ -60,7 +60,26 @@
   )
 )
 
-(decode-for table \i \m)
-
 (defn decipher [cipher message]
-  "decypherme")
+  (let
+    [
+      long-keyword (decode message cipher)
+    ]
+    (loop [size 1]
+      (let
+        [
+          short-keyword (subs long-keyword 0 size)
+        ]
+        (if
+          (=
+            (encode short-keyword message)
+            cipher
+          )
+          short-keyword
+          (recur (inc size))
+        )
+      )
+    )
+  )
+)
+
