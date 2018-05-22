@@ -19,6 +19,5 @@
     [[:goose :you] [:boat] [:corn :fox]]
     [[] [:boat :goose :you] [:corn :fox]]
     [[] [:boat] [:goose :you :corn :fox]]
-    ;[[] [:boat] [:fox :goose :corn :you]]
   ]
 )
